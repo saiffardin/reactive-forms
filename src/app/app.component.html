@@ -44,7 +44,13 @@
         </div>
 
         <!-- btn register -->
-        <button class="btn btn-primary" type="=submit">Register</button>
+        <button class="btn btn-primary me-2" type="=submit">Register</button>
+
+        <!-- load API -->
+        <button class="btn btn-danger me-2" (click)="loadAPI()">Load API</button>
+
+        <!-- patch API -->
+        <button class="btn btn-secondary me-2" (click)="patchAPI()">Patch API</button>
     </form>
 
     {{registrationForm.value | json}}

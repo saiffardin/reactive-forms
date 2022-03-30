@@ -18,4 +18,27 @@ export class AppComponent {
       postalCode: new FormControl(''),
     }),
   });
+
+  loadAPI() {
+    this.registrationForm.setValue({
+      userName: 'Fardin',
+      password: '',
+      confirmPassword: '',
+      address: {
+        city: 'Dhaka',
+        state: 'Ghulshan',
+        postalCode: '1217',
+      },
+    });
+  }
+
+  patchAPI() {
+    this.registrationForm.patchValue({
+      address: {
+        city: 'Chittagong',
+        state: 'Raozan',
+        postalCode: '6577',
+      },
+    });
+  }
 }
